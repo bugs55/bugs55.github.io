@@ -1,0 +1,345 @@
+@light-purple: #45476c;
+@almost-white: #dedede;
+@width-of-el: 400px;
+@size20: 20px;
+@radius: 15px;
+
+/*-------ALL ELEMENTS, BODY------*/
+body{
+    background: #1d1e2e;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+b{
+    font-weight: 700;
+}
+
+a:link, a:visited, a:active{
+    color: @almost-white;
+    text-decoration: none;
+}
+
+/*-------CONTENT------*/
+#content{
+    min-height: 100vh;
+    padding: 150px 0;
+    box-sizing: border-box;
+    position: relative;
+
+    #info{
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        color: @light-purple;
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+}
+
+/*-------HEADER------*/
+header{
+    text-align: center;
+    margin: 0 0 60px;
+    font-size: 120px;
+    color: @almost-white;
+    font-family: 'Pacifico', cursive;
+}
+
+@keyframes move{
+    to{stroke-dashoffset: 0;}
+}
+
+#letterpath{
+    stroke-dasharray: 678;
+    stroke-dashoffset: 678;
+    animation: move 2.6s linear forwards;
+}
+
+#d{
+    stroke-dasharray: 132;
+    stroke-dashoffset: 132;
+    animation: move 0.4s linear 2.6s forwards;
+}
+
+/*-------MACHINE------*/
+#machine{
+    text-align: center;
+    padding: 0 15px;
+
+    #fill{
+        font-size: 25px;
+        color: @light-purple;
+        margin: 0 0 20px 0;
+        line-height: 20px;
+
+        span#small{
+            font-size: 0.720em; //18px
+            font-weight: normal;
+        }
+    }
+
+/*------ELEMENTS-------*/
+    #elements{
+        overflow: auto;
+
+        .els{
+            margin: 0 auto 10px auto;
+            overflow: auto;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: @radius;
+            max-width: @width-of-el;
+            display: flex;
+            
+            .number, input, .cancel{
+                float: left;
+            }
+
+            .number, .cancel{
+                font-size: 20px;
+                color: @almost-white;
+                width: 25px;
+                height: 25px;
+                padding: 5px;
+                border-radius: 100px;
+                line-height: 25px;
+                margin: 0 10px 0 5px;
+                background: rgba(0, 0, 0, 0.25);
+            }
+
+            .cancel i::before{
+                margin: 0;
+            }
+
+            .cancel{
+                display: none;
+            }
+
+            input{
+                line-height: 29px;
+                flex: 1;
+                min-width: 0;
+                box-sizing: border-box;
+                border:none;
+                background-image:none;
+                background-color:transparent;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                padding: 3px 0 1px 0;
+                font-size: 20px;
+                color: @almost-white;
+
+                &::selection{
+                    background: @light-purple;
+                }
+
+                &::-moz-selection{
+                    background: @light-purple;
+                }
+            }
+
+            .clear{
+                clear: both;
+                display: none;
+            }
+
+            transition: max-width .3s;
+            -webkit-transition: max-width .3s;
+            -moz-transition: max-width .3s;
+            -o-transition: max-width .3s;
+
+            .cancel:hover{
+                cursor: pointer;
+            }
+        }
+
+        .els:hover{
+            max-width: @width-of-el+25px;
+            transition: max-width .3s;
+            -webkit-transition: max-width .3s;
+            -moz-transition: max-width .3s;
+            -o-transition: max-width .3s;
+        }
+
+        .els:focus-within{
+            max-width: @width-of-el+25px;
+        }
+    }
+
+    #new{
+        padding: 10px;
+        border-radius: @radius;
+        box-sizing: border-box;
+        max-width: 400px;
+        line-height: 27px;
+        margin: auto;
+        color: @light-purple;
+        border: 4px dotted @light-purple;
+        font-size: 18px;
+        transition: color .3s;
+        -webkit-transition: color .3s;
+        -moz-transition: color .3s;
+        -o-transition: color .3s;
+        overflow: visible;
+    }
+
+    span{
+        font-weight: 900;
+    }
+
+    #new:hover{
+        color: #7375a5;
+        transition: color .3s;
+        -webkit-transition: color .3s;
+        -moz-transition: color .3s;
+        -o-transition: color .3s;
+        cursor: pointer;
+    }
+
+    #button{
+        font-size: @size20;
+        color: @almost-white;
+        padding: 10px 5px;
+        width: 150px;
+        margin: 30px auto;
+        background: @light-purple;
+        border-radius: @radius;
+        position: relative;
+
+        /*----TOOLTIP-----*/
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: @almost-white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 130%;
+            left: 50%;
+            margin-left: -60px;
+            font-size: 15px;
+          
+            /* Fade in tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+            -webkit-transition: opacity 0.3s;
+            -moz-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+          }
+          
+        /* Tooltip arrow */
+        .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%;  /* At the bottom of the tooltip */
+            left: 50%;
+            transform: rotate(180deg);
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+          }
+          
+        /* Show the tooltip text when you mouse over the tooltip container */
+        &:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+          }
+
+        &:hover{
+            background: linear-gradient(144deg, rgba(0,191,255,1) 0%, rgba(133,51,255,1) 85%);
+            cursor: pointer;
+        }
+    }
+}
+
+/*-------RESULT------*/
+#result{
+    text-align: center;
+    color: @almost-white;
+    display: none;
+    margin-bottom: 30px;
+
+    #go-for{
+        font-size: 18px;
+    }
+
+    #winner{
+        font-size: 35px;
+        font-weight: 900;
+        margin: 5px 0 10px;
+    }
+
+    i.icon-star{
+        font-size: 35px;
+        color: #a366ff;
+    }
+}
+
+/*-------FOOTER--------*/
+footer{
+    background: #0C0C13;
+    color: @almost-white;
+    bottom: 0;
+
+    #container{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        padding: 50px;
+        box-sizing: border-box;
+        font-size: 16px;
+        align-items: center;
+
+        img{
+            max-width: 200px;
+            margin-left: 100px;
+        }
+
+        #about{
+            h2{
+                font-weight: 700;
+                font-size: 1.5625em;
+                margin-bottom: 5px;
+            }
+
+            #text{
+                text-align: justify;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+/*-------MEDIA QUERIES--------*/
+@media only screen and (max-height: 790px) {
+    #content #info{position: static;}
+}
+
+@media only screen and (max-width: 600px) {
+    header svg{display: none;}
+    header {font-size: 90px;}
+    header{margin: 50px 0 45px;}
+    footer #container {flex-direction: column;}
+    footer #container img {margin: 30px 0;}
+    #content {padding: 15px 0;}
+}
+
+@media only screen and (max-width: 430px) {
+    header {font-size: 70px;}
+    .els:focus-within, .els:hover{transition: none; -webkit-transition: none; -moz-transition: none; -o-transition: none;}
+}
+
+@media only screen and (max-width: 357px) {
+    header {font-size: 60px;}
+}
