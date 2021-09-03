@@ -1,5 +1,80 @@
-<!DOCTYPE html><html><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152691636-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-152691636-1")</script><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Conflicted? Let me choose!</title><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="Konrad Szczepanowski"><meta name="keywords" content="Conflicted, fill, the, boxes, choose, pick, dilemma"><meta name="description" content="Imagine that you are in a store and you want to buy a socks. You find three different and favourite colors of socks. You have no idea which one you should choose. That’s a hard dilemma. And this is the right situation to use ‘Conflicted’! This tool allows you to write in anything you want: socks, movies, next color of your hair, etc… and make decision for you. You don’t have to agree with everything the tool will show, you can say ‘yes’ or ‘no’. It always a beginning!"><!--------FAVICON----------><link rel="icon" type="image/png" href="pic/favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="pic/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="pic/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="pic/favicon-160x160.png" sizes="160x160"><link rel="icon" type="image/png" href="pic/favicon-196x196.png" sizes="196x196"><link rel="apple-touch-icon" sizes="57x57" href="pic/favicon-57x57.png"><link rel="apple-touch-icon" sizes="114x114" href="pic/favicon-114x114.png"><link rel="apple-touch-icon" sizes="72x72" href="pic/favicon-72x72.png"><link rel="apple-touch-icon" sizes="144x144" href="pic/favicon-144x144.png"><link rel="apple-touch-icon" sizes="60x60" href="pic/favicon-60x60.png"><link rel="apple-touch-icon" sizes="120x120" href="pic/favicon-120x120.png"><link rel="apple-touch-icon" sizes="76x76" href="pic/favicon-76x76.png"><link rel="apple-touch-icon" sizes="152x152" href="pic/favicon-152x152.png"><meta name="msapplication-TileColor" content="#1D1E2E"><meta name="msapplication-TileImage" content="pic/favicon-144x144.png"><link rel="stylesheet" type="text/css" media="screen" href="css/reset.css"><link rel="stylesheet" type="text/css" media="screen" href="css/style.css"><link rel="stylesheet" type="text/css" media="screen" href="fontello/css/fontello.css"><link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:500,900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script></head><body><div id="content"><!------HEADER------><header>Conflicted?</header><!------MACHINE------><section id="machine"><div id="fill"><span>Fill the boxes</span><br><span id="small">with things you want me to pick</span></div><div id="elements"></div><div id="new"><i class="icon-plus-circled"></i><span>Tab</span> or click here to add new</div><div id="button">Choose<div class="tooltiptext">You can click <span>Enter</span> instead!</div></div></section><!------RESULT------><section id="result"><div id="go-for">You should go for...</div><div id="winner">Winner</div><i class="icon-star"></i></section><div id="info"><i class="icon-down-outline"></i> If you want to know more, scroll down!</div></div><!------FOOTER------><footer><div id="container"><div id="about"><h2>What can I do here?</h2><div id="text">Imagine that you are in a store and you want to buy a socks. You find three different and favourite colors of socks. You have no idea which one you should choose. That’s a hard dilemma. And this is the right situation to use ‘Conflicted’! This tool allows you to write in anything you want: socks, movies, next color of your hair, etc… and make decision for you. You don’t have to agree with everything the tool will show, you can say ‘yes’ or ‘no’. It always a beginning!<br><br>&copy; All copyrights reserved by <b>Konrad Szczepanowski</b><div>Icon in footer made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan"><b>Darius Dan</b></a> from <a href="https://www.flaticon.com/" title="Flaticon"><b>www.flaticon.com</b></a></div></div></div><img src="pic/directions.png" alt="lines"></div></footer><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><script src="script.js"></script><!--<script type="text/javascript">
-         var el = document.getElementById("d");
-         var len = Math.round(el.getTotalLength());
-         console.log(len);
-      </script>--></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conflicted? Let me choose!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Konrad Szczepanowski">
+    <meta name="keywords" content="Conflicted, fill, the, boxes, choose, pick, dilemma">
+    <meta name="description" content="Imagine that you are in a store and you want to buy a socks. You find three different and favourite colors of socks. You have no idea which one you should choose. That’s a hard dilemma. And this is the right situation to use ‘Conflicted’! This tool allows you to write in anything you want: socks, movies, next color of your hair, etc… and make decision for you. You don’t have to agree with everything the tool will show, you can say ‘yes’ or ‘no’. It always a beginning!">
+
+    <!--------FAVICON---------->
+    <link rel="icon" type="image/png" href="pic/favicon-16x16.png" sizes="16x16" />
+      <link rel="icon" type="image/png" href="pic/favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="pic/favicon-96x96.png" sizes="96x96" />
+      <link rel="icon" type="image/png" href="pic/favicon-160x160.png" sizes="160x160" />
+      <link rel="icon" type="image/png" href="pic/favicon-196x196.png" sizes="196x196" />
+
+      <link rel="apple-touch-icon" sizes="57x57" href="pic/favicon-57x57.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="pic/favicon-114x114.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="pic/favicon-72x72.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="pic/favicon-144x144.png" />
+      <link rel="apple-touch-icon" sizes="60x60" href="pic/favicon-60x60.png" />
+      <link rel="apple-touch-icon" sizes="120x120" href="pic/favicon-120x120.png" />
+      <link rel="apple-touch-icon" sizes="76x76" href="pic/favicon-76x76.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="pic/favicon-152x152.png" />
+
+      <meta name="msapplication-TileColor" content="#1D1E2E">
+      <meta name="msapplication-TileImage" content="pic/favicon-144x144.png">
+      
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="fontello/css/fontello.css">
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:500,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+   <div id="content">
+      <!------HEADER------>
+      <header>Conflicted?</header>
+
+      <!------MACHINE------>
+      <section id="machine">
+         <div id="fill"><span>Fill the boxes</span><br> <span id="small">with things you want me to pick</span></div>
+         <div id="elements"></div>
+         <div id="new"><i class="icon-plus-circled"></i><span>Tab</span> or click here to add new</div>
+         <div id="button">Choose <div class="tooltiptext">You can click <span>Enter</span> instead!</div></div>
+      </section>
+
+      <!------RESULT------>
+      <section id="result">
+         <div id="go-for">You should go for...</div>
+         <div id="winner">Winner</div>
+         <i class="icon-star"></i>
+      </section>
+
+      <div id="info"><i class="icon-down-outline"></i> If you want to know more, scroll down!</div>
+   </div>
+      <!------FOOTER------>
+      <footer>
+         <div id="container">
+            <div id="about">
+               <h2>What can I do here?</h2>
+               <div id="text">
+                     Imagine that you are in a store and you want to buy a socks. You find three different and favourite colors of socks. You have no idea which one you should choose. That’s a hard dilemma. And this is the right situation to use ‘Conflicted’! This tool allows you to write in anything you want: socks, movies, next color of your hair, etc… and make decision for you.
+                     You don’t have to agree with everything the tool will show, you can say ‘yes’ or ‘no’. It always a beginning!                     
+                  <br><br>
+                  &copy; All copyrights reserved by <b>Konrad Szczepanowski</b>
+                  <div>Icon in footer made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan"><b>Darius Dan</b></a> from <a href="https://www.flaticon.com/"             title="Flaticon"><b>www.flaticon.com</b></a></div>
+               </div>
+            </div>
+            <img src="pic/directions.png" alt="lines">
+         </div>
+      </footer>
+
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>
